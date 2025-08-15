@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development | LynqIQ</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/software-dev.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text" style="color: purple">LynqIQ</span>
+                        <span class="logo-dot" style="color: purple">.</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../public/index.html">Home</a></li>
+                    <li><a href="../public/about.html" class="active">About</a></li>
+                    <li><a href="../public/services.html">Services</a></li>
+                    <li><a href="../public/contact.html">Contact</a></li>
+                </ul>
+
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Software Dev Hero -->
+    <section class="dev-hero">
+        <div class="hero-content">
+            <h1>Custom <span>Software Development</span></h1>
+            <p>Building scalable, high-performance solutions tailored to your business needs</p>
+            <a href="#dev-services" class="cta-button">Explore Our Process</a>
+        </div>
+        <div class="hero-graphic">
+            <div class="code-window">
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="cursor"></div>
+            </div>
+            <div class="floating-icon"><i class="fab fa-js"></i></div>
+            <div class="floating-icon"><i class="fab fa-python"></i></div>
+            <div class="floating-icon"><i class="fab fa-java"></i></div>
+        </div>
+    </section>
+
+    <!-- Dev Services -->
+    <section id="dev-services" class="dev-services">
+        <div class="section-header">
+            <h2>Our <span>Development</span> Expertise</h2>
+            <p>End-to-end software solutions from concept to deployment</p>
+        </div>
+
+        <div class="services-tabs">
+            <button class="tab-btn active" data-tab="web">Web Development</button>
+            <button class="tab-btn" data-tab="mobile">Mobile Apps</button>
+            <button class="tab-btn" data-tab="enterprise">Enterprise Solutions</button>
+            <button class="tab-btn" data-tab="devops">DevOps</button>
+        </div>
+
+        <div class="services-content">
+            <!-- Web Development -->
+            <div id="web" class="tab-content active">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-globe"></i> Modern Web Applications</h3>
+                        <p>We build responsive, secure web applications with cutting-edge technologies:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> React, Angular, Vue.js frontends</li>
+                            <li><i class="fas fa-check-circle"></i> Node.js, Django, Spring Boot backends</li>
+                            <li><i class="fas fa-check-circle"></i> Progressive Web Apps (PWAs)</li>
+                            <li><i class="fas fa-check-circle"></i> API development & integration</li>
+                        </ul>
+                        <a href="#" class="service-link">View web portfolio <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Apps -->
+            <div id="mobile" class="tab-content">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-mobile-alt"></i> Cross-Platform Mobile</h3>
+                        <p>Native and hybrid mobile applications for all platforms:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> iOS (Swift) & Android (Kotlin)</li>
+                            <li><i class="fas fa-check-circle"></i> React Native & Flutter apps</li>
+                            <li><i class="fas fa-check-circle"></i> App Store optimization</li>
+                            <li><i class="fas fa-check-circle"></i> Offline-first architecture</li>
+                        </ul>
+                        <a href="#" class="service-link">See mobile case studies <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Solutions -->
+            <div id="enterprise" class="tab-content">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-building"></i> Enterprise Systems</h3>
+                        <p>Scalable solutions for large organizations:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Microservices architecture</li>
+                            <li><i class="fas fa-check-circle"></i> Legacy system modernization</li>
+                            <li><i class="fas fa-check-circle"></i> ERP & CRM integration</li>
+                            <li><i class="fas fa-check-circle"></i> High-availability systems</li>
+                        </ul>
+                        <a href="#" class="service-link">Request enterprise consultation <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps -->
+            <div id="devops" class="tab-content">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-cogs"></i> DevOps & CI/CD</h3>
+                        <p>Automated deployment pipelines and infrastructure:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Docker & Kubernetes</li>
+                            <li><i class="fas fa-check-circle"></i> AWS/Azure/GCP setup</li>
+                            <li><i class="fas fa-check-circle"></i> Infrastructure as Code (IaC)</li>
+                            <li><i class="fas fa-check-circle"></i> Monitoring & logging</li>
+                        </ul>
+                        <a href="#" class="service-link">Get DevOps assessment <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="dev-stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number" data-count="30">0</div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="99">0</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="24">0</div>
+                <div class="stat-label">Hour Support</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="3">0</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="dev-process">
+        <div class="section-header">
+            <h2>Our <span>Development</span> Process</h2>
+            <p>A proven methodology for successful software delivery</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Discovery</h3>
+                <p>Requirements gathering and analysis</p>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Design</h3>
+                <p>UI/UX and system architecture</p>
+                <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Development</h3>
+                <p>Agile sprints with continuous testing</p>
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Deployment</h3>
+                <p>CI/CD pipeline and launch</p>
+                <i class="fas fa-rocket"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="dev-cta">
+        <div class="cta-container">
+            <h2>Ready to Build Your Software Solution?</h2>
+            <p>Let's discuss your project requirements and timeline</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">
+                    <i class="fas fa-calendar-alt"></i> Schedule Consultation
+                </a>
+                <a href="tel:+254700123456" class="cta-button secondary">
+                    <i class="fas fa-phone"></i> Call Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text">LynqIQ</span>
+                            <span class="logo-dot">.</span>
+                        </a>
+                    </div>
+                    <p class="footer-description">
+                        We deliver innovative technology solutions that drive business growth and digital
+                        transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="../public/services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="../public/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="../public/case-studies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                        </li>
+                        <li><a href="../public/contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="../public/data-science.html"><i class="fas fa-chevron-right"></i> Data Science</a>
+                        </li>
+                        <li><a href="../public/software-dev.html"><i class="fas fa-chevron-right"></i> Software
+                                Development</a></li>
+                        <li><a href="../public/it-support.html"><i class="fas fa-chevron-right"></i> IT Support</a></li>
+                        <li><a href="../public/cloud-services.html"><i class="fas fa-chevron-right"></i> Cloud
+                                Solutions</a></li>
+                        <li><a href="../public/consulting.html"><i class="fas fa-chevron-right"></i> Technology
+                                Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> GTC Towers, Nairobi, Kenya</p>
+                        <p><i class="fas fa-envelope"></i> contact@lynqiq.com</p>
+                        <p><i class="fas fa-phone"></i> +254 743 874 690</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <form class="newsletter-form">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 LynqIQ. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="../scripts/software-dev.js"></script>
+</body>
+
+</html>
+

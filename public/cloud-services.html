@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Services | LynqIQ</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/cloud-services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text" style="color: purple">LynqIQ</span>
+                        <span class="logo-dot" style="color: purple">.</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../public/index.html">Home</a></li>
+                    <li><a href="../public/about.html">About</a></li>
+                    <li><a href="../public/services.html">Services</a></li>
+                    <li><a href="../public/contact.html">Contact</a></li>
+                </ul>
+
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cloud Hero Section -->
+    <section class="cloud-hero">
+        <div class="hero-content">
+            <h1>Enterprise <span>Cloud Solutions</span></h1>
+            <p>Scalable, secure cloud infrastructure tailored to your business needs</p>
+            <a href="#cloud-services" class="cta-button">Explore Cloud Offerings</a>
+        </div>
+        <div class="hero-graphic">
+            <div class="cloud-server">
+                <div class="server-layer"></div>
+                <div class="server-layer"></div>
+                <div class="server-layer"></div>
+                <div class="cloud-icon"><i class="fas fa-cloud"></i></div>
+                <div class="cloud-icon"><i class="fas fa-database"></i></div>
+            </div>
+            <div class="floating-node"></div>
+            <div class="floating-node"></div>
+            <div class="floating-node"></div>
+        </div>
+    </section>
+
+    <!-- Cloud Services Section -->
+    <section id="cloud-services" class="cloud-services">
+        <div class="section-header">
+            <h2>Our <span>Cloud</span> Expertise</h2>
+            <p>Comprehensive cloud solutions for businesses of all sizes</p>
+        </div>
+
+        <div class="services-tabs">
+            <button class="tab-btn active" data-tab="migration">Cloud Migration</button>
+            <button class="tab-btn" data-tab="management">Cloud Management</button>
+            <button class="tab-btn" data-tab="hybrid">Hybrid Cloud</button>
+            <button class="tab-btn" data-tab="security">Cloud Security</button>
+        </div>
+
+        <div class="services-content">
+            <!-- Cloud Migration -->
+            <div id="migration" class="tab-content active">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-cloud-upload-alt"></i> Seamless Cloud Migration</h3>
+                        <p>We ensure smooth transition to the cloud with minimal downtime:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Lift-and-shift strategies</li>
+                            <li><i class="fas fa-check-circle"></i> Application refactoring</li>
+                            <li><i class="fas fa-check-circle"></i> Data migration services</li>
+                            <li><i class="fas fa-check-circle"></i> Post-migration optimization</li>
+                        </ul>
+                        <a href="#" class="service-link">View migration case studies <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Management -->
+            <div id="management" class="tab-content">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-cogs"></i> Cloud Infrastructure Management</h3>
+                        <p>Ongoing optimization and management of your cloud environment:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> 24/7 monitoring</li>
+                            <li><i class="fas fa-check-circle"></i> Cost optimization</li>
+                            <li><i class="fas fa-check-circle"></i> Performance tuning</li>
+                            <li><i class="fas fa-check-circle"></i> Auto-scaling configuration</li>
+                        </ul>
+                        <a href="#" class="service-link">See management plans <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hybrid Cloud -->
+            <div id="hybrid" class="tab-content">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-network-wired"></i> Hybrid Cloud Solutions</h3>
+                        <p>Bridging on-premises and cloud environments:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Private/public cloud integration</li>
+                            <li><i class="fas fa-check-circle"></i> Data synchronization</li>
+                            <li><i class="fas fa-check-circle"></i> Workload balancing</li>
+                            <li><i class="fas fa-check-circle"></i> Unified management</li>
+                        </ul>
+                        <a href="#" class="service-link">Learn about hybrid benefits <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Security -->
+            <div id="security" class="tab-content">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3><i class="fas fa-shield-alt"></i> Cloud Security & Compliance</h3>
+                        <p>Protecting your cloud assets and data:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Identity & access management</li>
+                            <li><i class="fas fa-check-circle"></i> Data encryption</li>
+                            <li><i class="fas fa-check-circle"></i> Compliance auditing</li>
+                            <li><i class="fas fa-check-circle"></i> Threat detection</li>
+                        </ul>
+                        <a href="#" class="service-link">Request security audit <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="content-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloud Providers Section -->
+    <section class="cloud-providers">
+        <div class="section-header">
+            <h2>We Work With All Major <span>Cloud Platforms</span></h2>
+            <p>Certified experts across all leading cloud providers</p>
+        </div>
+        <div class="providers-grid">
+            <div class="provider-card">
+                <i class="fab fa-aws"></i>
+                <h3>AWS</h3>
+                <p>Amazon Web Services solutions with certified architects</p>
+            </div>
+            <div class="provider-card">
+                <i class="fab fa-microsoft"></i>
+                <h3>Azure</h3>
+                <p>Microsoft Azure implementations and migrations</p>
+            </div>
+            <div class="provider-card">
+                <i class="fab fa-google"></i>
+                <h3>Google Cloud</h3>
+                <p>GCP deployments with AI/ML integration</p>
+            </div>
+            <div class="provider-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Private Cloud</h3>
+                <p>Custom private cloud solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="cloud-stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number" data-count="500">0</div>
+                <div class="stat-label">Cloud Deployments</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="40">0</div>
+                <div class="stat-label">Certified Engineers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="99.99">0</div>
+                <div class="stat-label">Uptime SLA</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="60">0</div>
+                <div class="stat-label">Cost Reduction Avg.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cloud-cta">
+        <div class="cta-container">
+            <h2>Ready to Transform Your Business with Cloud?</h2>
+            <p>Get a free cloud assessment from our certified architects</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">
+                    <i class="fas fa-cloud-upload-alt"></i> Start Migration
+                </a>
+                <a href="tel:+254700123456" class="cta-button secondary">
+                    <i class="fas fa-phone"></i> Speak to an Expert
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text">LynqIQ</span>
+                            <span class="logo-dot">.</span>
+                        </a>
+                    </div>
+                    <p class="footer-description">
+                        We deliver innovative technology solutions that drive business growth and digital
+                        transformation.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="../public/services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="../public/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="../public/case-studies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                        </li>
+                        <li><a href="../public/contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="../public/data-science.html"><i class="fas fa-chevron-right"></i> Data Science</a>
+                        </li>
+                        <li><a href="../public/software-dev.html"><i class="fas fa-chevron-right"></i> Software
+                                Development</a></li>
+                        <li><a href="../public/it-support.html"><i class="fas fa-chevron-right"></i> IT Support</a></li>
+                        <li><a href="../public/cloud-services.html"><i class="fas fa-chevron-right"></i> Cloud
+                                Solutions</a></li>
+                        <li><a href="../public/consulting.html"><i class="fas fa-chevron-right"></i> Technology
+                                Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> GTC Towers, Nairobi, Kenya</p>
+                        <p><i class="fas fa-envelope"></i> contact@lynqiq.com</p>
+                        <p><i class="fas fa-phone"></i> +254 743 874 690</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <form class="newsletter-form">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 LynqIQ. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/cloud-services.js"></script>
+</body>
+
+</html>
