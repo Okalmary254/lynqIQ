@@ -815,7 +815,7 @@ h4,
 
     .timeline-item::after {
         left: 19px;
-        margin-left: 0;
+        margin-left: 10px;
     }
 
     .timeline-date {
