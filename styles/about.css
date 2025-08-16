@@ -802,3 +802,61 @@ h4,
         overflow: hidden;
     }
 }
+/* ===== Mobile Responsive Styles ===== */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        padding-left: 70px;
+        width: 100%;
+    }
+    
+    .timeline-item::after {
+        left: 19px;
+        margin-left: 0;
+    }
+    
+    .timeline-date {
+        text-align: left;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding: 0 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-item::after {
+        width: 20px;
+        height: 20px;
+        left: 15px;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .timeline-date {
+        font-size: 1rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+}
