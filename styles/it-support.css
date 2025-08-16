@@ -23,7 +23,12 @@ body {
     background-color: var(--it-light);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     line-height: 1.2;
@@ -433,12 +438,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(55, 236, 186, 0) 0%,
-        rgba(55, 236, 186, 0.1) 50%,
-        rgba(55, 236, 186, 0) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(55, 236, 186, 0) 0%,
+            rgba(55, 236, 186, 0.1) 50%,
+            rgba(55, 236, 186, 0) 100%);
     animation: screenScan 4s linear infinite;
 }
 
@@ -477,19 +480,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes screenScan {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(55, 236, 186, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(55, 236, 186, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(55, 236, 186, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(55, 236, 186, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(55, 236, 186, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(55, 236, 186, 0);
+    }
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* Trust Badges Section */
@@ -965,26 +988,27 @@ h1, h2, h3, h4, h5, h6 {
     .hero-container {
         flex-direction: column;
     }
-    
+
     .hero-content {
         max-width: 100%;
         text-align: center;
         margin-bottom: 50px;
     }
-    
-    .hero-cta, .hero-features {
+
+    .hero-cta,
+    .hero-features {
         justify-content: center;
     }
-    
+
     .hero-graphic {
         width: 100%;
         height: 400px;
     }
-    
+
     .support-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .support-image {
         order: 2;
     }
@@ -994,15 +1018,15 @@ h1, h2, h3, h4, h5, h6 {
     .content-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .content-image {
         height: 400px;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .support-options {
         grid-template-columns: 1fr;
     }
@@ -1012,28 +1036,28 @@ h1, h2, h3, h4, h5, h6 {
     .section-title {
         font-size: 2rem;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .nav-links {
         display: none;
     }
-    
+
     .header-cta {
         display: none;
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         gap: 15px;
@@ -1044,20 +1068,85 @@ h1, h2, h3, h4, h5, h6 {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .section-header {
         margin-bottom: 30px;
     }
-    
+
     .tabs-nav {
         flex-direction: column;
     }
-    
+
     .tab-btn {
         justify-content: center;
+    }
+}
+
+/* Mobile Menu Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: purple;
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: purple;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.5s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
     }
 }

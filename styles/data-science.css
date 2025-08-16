@@ -20,7 +20,12 @@ body {
     background-color: var(--ds-light);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     line-height: 1.2;
@@ -285,24 +290,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
 }
 
 @keyframes flow {
-    0% { 
+    0% {
         top: 0;
         left: 0;
         opacity: 0;
         transform: scale(0.5);
     }
+
     10% {
         opacity: 1;
     }
+
     90% {
         opacity: 1;
     }
-    100% { 
+
+    100% {
         top: 100%;
         left: 100%;
         opacity: 0;
@@ -311,10 +326,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes particle-float {
-    0% { transform: translateY(0) translateX(0); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0;
+    }
 }
 
 /* Demo Section */
@@ -653,22 +681,23 @@ h1, h2, h3, h4, h5, h6 {
     .hero-container {
         flex-direction: column;
     }
-    
+
     .hero-content {
         max-width: 100%;
         text-align: center;
         margin-bottom: 50px;
     }
-    
-    .hero-cta, .hero-features {
+
+    .hero-cta,
+    .hero-features {
         justify-content: center;
     }
-    
+
     .hero-graphic {
         width: 100%;
         height: 400px;
     }
-    
+
     .chart-card.wide {
         grid-column: span 1;
     }
@@ -678,7 +707,7 @@ h1, h2, h3, h4, h5, h6 {
     .services-grid {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .step-content {
         margin-left: 70px;
     }
@@ -688,41 +717,41 @@ h1, h2, h3, h4, h5, h6 {
     .section-title {
         font-size: 2rem;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .nav-links {
         display: none;
     }
-    
+
     .header-cta {
         display: none;
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .chart-container {
         grid-template-columns: 1fr;
     }
-    
+
     .process-line {
         left: 25px;
     }
-    
+
     .step-number {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
     }
-    
+
     .step-content {
         margin-left: 60px;
     }
@@ -732,30 +761,95 @@ h1, h2, h3, h4, h5, h6 {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .section-header {
         margin-bottom: 30px;
     }
-    
+
     .tabs-nav {
         flex-direction: column;
     }
-    
+
     .tab-btn {
         justify-content: center;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .step-content {
         margin-left: 50px;
         padding: 15px;
+    }
+}
+
+/* Mobile Menu Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: purple;
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: purple;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.5s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
     }
 }
