@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 link.style.transform = 'scale(1)';
             }, 300);
-            // In a real scenario, this would link to your social profiles
             console.log(`Navigating to ${link.getAttribute('aria-label')}`);
         });
     });
