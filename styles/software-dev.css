@@ -7,31 +7,17 @@
     --dev-light: #f8f9fa;
 }
 
+
+/* Hero Section */
 .dev-hero {
     background: linear-gradient(135deg, var(--dev-dark), #2a1b3d);
     color: white;
-    /* padding: 6rem 5% 8rem; */
-    padding: 180px 0 100px;
+    padding: 6rem 5% 8rem;
     position: relative;
     overflow: hidden;
 }
 
-.hero-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-}
-
-/* Hero Section */
-
-
-.dev-hero {
+.dev-hero .hero-content {
     max-width: 600px;
     position: relative;
     z-index: 2;
