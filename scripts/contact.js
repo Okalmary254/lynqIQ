@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show it
         popup.style.display = "block";
 
-        // After 5 seconds, hide it again
         setTimeout(() => {
             popup.style.display = "none";
         }, 3000);
