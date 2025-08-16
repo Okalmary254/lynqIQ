@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Submit if Valid
         if (isValid) {
-            // Simulate form submission (replace with actual fetch/AJAX)
+            // Simulate form submission 
             setTimeout(() => {
                 contactForm.reset();
                 contactForm.style.display = 'none';
@@ -52,6 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         }
     });
+
+    // Function to show popup for 5 seconds
+    function showSuccessMessage() {
+        const popup = document.getElementById("formSuccess");
+
+        // Show it
+        popup.style.display = "block";
+
+        // After 5 seconds, hide it again
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 5000);
+    }
+
 
 
     // Add click animation to social links
