@@ -10,8 +10,8 @@
 .dev-hero {
     background: linear-gradient(135deg, var(--dev-dark), #2a1b3d);
     color: white;
-    padding: 6rem 5% 8rem;
-    /*padding: 180px 0 100px;*/
+    /* padding: 6rem 5% 8rem; */
+    padding: 180px 0 100px;
     position: relative;
     overflow: hidden;
 }
