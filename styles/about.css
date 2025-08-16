@@ -291,9 +291,9 @@ h4,
 
 .timeline-item:nth-child(odd),
 .timeline-item:nth-child(even) {
-    left: 0;
-    padding-right: 0;
-    padding-left: 0;
+    left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .timeline-date {
@@ -324,6 +324,7 @@ h4,
     color: var(--gray);
     font-size: 0.95rem;
 }
+
 /* ===== Team Section ===== */
 .team-grid {
     display: grid;
@@ -753,7 +754,8 @@ h4,
 
     .nav-links {
         position: fixed;
-        top: 80px; /* Below header */
+        top: 80px;
+        /* Below header */
         left: -100%;
         width: 80%;
         height: calc(100vh - 80px);
@@ -799,26 +801,27 @@ h4,
         overflow: hidden;
     }
 }
+
 /* ===== Mobile Responsive Styles ===== */
 @media (max-width: 768px) {
     .timeline::after {
         left: 31px;
     }
-    
+
     .timeline-item {
         padding-left: 70px;
         width: 100%;
     }
-    
+
     .timeline-item::after {
         left: 19px;
         margin-left: 0;
     }
-    
+
     .timeline-date {
         text-align: left;
     }
-    
+
     .timeline-content {
         width: 100%;
         margin-left: 0;
@@ -830,29 +833,29 @@ h4,
     .timeline {
         padding: 0 15px;
     }
-    
+
     .timeline-item {
         padding-left: 50px;
     }
-    
+
     .timeline-item::after {
         width: 20px;
         height: 20px;
         left: 15px;
     }
-    
+
     .timeline-content {
         padding: 1rem;
     }
-    
+
     .timeline-date {
         font-size: 1rem;
     }
-    
+
     .timeline-content h3 {
         font-size: 1.1rem;
     }
-    
+
     .timeline-content p {
         font-size: 0.9rem;
     }
