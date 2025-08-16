@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize all charts
     initBarChart();
     initPieChart();
@@ -11,20 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Tab functionality
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
-    
+
     tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // Remove active class from all buttons and contents
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
-            
+
             // Add active class to clicked button
             this.classList.add('active');
-            
+
             // Show corresponding content
             const tabId = this.getAttribute('data-tab');
             document.getElementById(tabId).classList.add('active');
-            
+
             // Resize charts when tab changes
             setTimeout(() => {
                 window.dispatchEvent(new Event('resize'));
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     y: {
                         beginAtZero: true,
                         ticks: {
-                            callback: function(value) {
+                            callback: function (value) {
                                 return 'ksh ' + value.toLocaleString();
                             }
                         }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return 'ksh ' + context.raw.toLocaleString();
                             }
                         }
@@ -74,16 +74,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update chart when control buttons are clicked
         document.querySelectorAll('.chart-controls .control-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 if (this.classList.contains('active')) return;
-                
+
                 document.querySelectorAll('.chart-controls .control-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                
+
                 const dataset = this.getAttribute('data-dataset');
                 let newData;
-                
-                switch(dataset) {
+
+                switch (dataset) {
                     case '2023':
                         newData = [110000, 130000, 145000, 190000];
                         break;
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     default: // 2024
                         newData = [125000, 150000, 180000, 210000];
                 }
-                
+
                 barChart.data.datasets = [{
                     label: dataset === 'comparison' ? 'Comparison' : dataset + ' Sales',
                     data: newData,
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.label + ': ' + context.raw + '%';
                             }
                         }
@@ -168,16 +168,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update chart when quarter buttons are clicked
         document.querySelectorAll('#pieChart ~ .chart-controls .control-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 if (this.classList.contains('active')) return;
-                
+
                 document.querySelectorAll('#pieChart ~ .chart-controls .control-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                
+
                 const quarter = this.getAttribute('data-dataset');
                 let newData;
-                
-                switch(quarter) {
+
+                switch (quarter) {
                     case 'Q2':
                         newData = [30, 30, 15, 20, 5];
                         break;
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     default: // Q1
                         newData = [35, 25, 20, 15, 5];
                 }
-                
+
                 pieChart.data.datasets[0].data = newData;
                 pieChart.update();
             });
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     y: {
                         beginAtZero: false,
                         ticks: {
-                            callback: function(value) {
+                            callback: function (value) {
                                 return 'ksh ' + value.toLocaleString();
                             }
                         }
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return 'ksh ' + context.raw.toLocaleString();
                             }
                         }
@@ -241,16 +241,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update chart when product buttons are clicked
         document.querySelectorAll('#lineChart ~ .chart-controls .control-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 if (this.classList.contains('active')) return;
-                
+
                 document.querySelectorAll('#lineChart ~ .chart-controls .control-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                
+
                 const product = this.getAttribute('data-dataset');
                 let newData, label;
-                
-                switch(product) {
+
+                switch (product) {
                     case 'electronics':
                         newData = [40000, 42000, 45000, 48000, 52000, 55000, 58000, 60000, 62000, 65000, 68000, 70000];
                         label = 'Electronics';
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         newData = [85000, 90000, 95000, 100000, 110000, 115000, 120000, 125000, 130000, 135000, 140000, 145000];
                         label = 'All Products';
                 }
-                
+
                 lineChart.data.datasets[0].data = newData;
                 lineChart.data.datasets[0].label = label;
                 lineChart.update();
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.raw + '% market share';
                             }
                         }
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     y: {
                         beginAtZero: false,
                         ticks: {
-                            callback: function(value) {
+                            callback: function (value) {
                                 return value + '%';
                             }
                         }
@@ -358,21 +358,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Update chart when select inputs change
-        document.getElementById('trendMetric').addEventListener('change', function() {
+        document.getElementById('trendMetric').addEventListener('change', function () {
             updateAreaChart();
         });
 
-        document.getElementById('timePeriod').addEventListener('change', function() {
+        document.getElementById('timePeriod').addEventListener('change', function () {
             updateAreaChart();
         });
 
         function updateAreaChart() {
             const metric = document.getElementById('trendMetric').value;
             const period = document.getElementById('timePeriod').value;
-            
+
             let newData, label;
-            
-            switch(metric) {
+
+            switch (metric) {
                 case 'growth_rate':
                     label = 'Growth Rate';
                     newData = [1.5, 1.8, 2.0, 2.2, 2.5, 2.7, 3.0, 3.2, 3.5, 3.7, 4.0, 4.2];
@@ -385,49 +385,49 @@ document.addEventListener('DOMContentLoaded', function() {
                     label = 'Market Share';
                     newData = [15, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21];
             }
-            
+
             if (period === '24_months') {
-                areaChart.data.labels = Array.from({length: 24}, (_, i) => {
+                areaChart.data.labels = Array.from({ length: 24 }, (_, i) => {
                     const month = i % 12;
                     return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][month] + ' ' + (2022 + Math.floor(i / 12));
                 });
-                newData = Array.from({length: 24}, (_, i) => newData[i % 12] * (1 + Math.floor(i / 12) * 0.2));
+                newData = Array.from({ length: 24 }, (_, i) => newData[i % 12] * (1 + Math.floor(i / 12) * 0.2));
             } else if (period === '36_months') {
-                areaChart.data.labels = Array.from({length: 36}, (_, i) => {
+                areaChart.data.labels = Array.from({ length: 36 }, (_, i) => {
                     const month = i % 12;
                     return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][month] + ' ' + (2021 + Math.floor(i / 12));
                 });
-                newData = Array.from({length: 36}, (_, i) => newData[i % 12] * (1 + Math.floor(i / 12) * 0.2));
+                newData = Array.from({ length: 36 }, (_, i) => newData[i % 12] * (1 + Math.floor(i / 12) * 0.2));
             } else {
                 areaChart.data.labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
             }
-            
+
             areaChart.data.datasets[0].data = newData;
             areaChart.data.datasets[0].label = label;
-            
+
             if (metric === 'customer_acquisition') {
-                areaChart.options.scales.y.ticks.callback = function(value) {
+                areaChart.options.scales.y.ticks.callback = function (value) {
                     return value.toLocaleString();
                 };
-                areaChart.options.plugins.tooltip.callbacks.label = function(context) {
+                areaChart.options.plugins.tooltip.callbacks.label = function (context) {
                     return context.raw.toLocaleString() + ' customers';
                 };
             } else if (metric === 'growth_rate') {
-                areaChart.options.scales.y.ticks.callback = function(value) {
+                areaChart.options.scales.y.ticks.callback = function (value) {
                     return value + '%';
                 };
-                areaChart.options.plugins.tooltip.callbacks.label = function(context) {
+                areaChart.options.plugins.tooltip.callbacks.label = function (context) {
                     return context.raw + '% growth';
                 };
             } else {
-                areaChart.options.scales.y.ticks.callback = function(value) {
+                areaChart.options.scales.y.ticks.callback = function (value) {
                     return value + '%';
                 };
-                areaChart.options.plugins.tooltip.callbacks.label = function(context) {
+                areaChart.options.plugins.tooltip.callbacks.label = function (context) {
                     return context.raw + '% market share';
                 };
             }
-            
+
             areaChart.update();
         }
     }
@@ -442,9 +442,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     {
                         label: 'Competitor A',
                         data: [
-                            {x: 15, y: 80, r: 20},
-                            {x: 18, y: 75, r: 25},
-                            {x: 20, y: 78, r: 30}
+                            { x: 15, y: 80, r: 20 },
+                            { x: 18, y: 75, r: 25 },
+                            { x: 20, y: 78, r: 30 }
                         ],
                         backgroundColor: 'rgba(255, 107, 107, 0.7)',
                         borderColor: 'rgba(255, 107, 107, 1)'
@@ -452,9 +452,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     {
                         label: 'Competitor B',
                         data: [
-                            {x: 22, y: 85, r: 25},
-                            {x: 25, y: 82, r: 20},
-                            {x: 28, y: 88, r: 35}
+                            { x: 22, y: 85, r: 25 },
+                            { x: 25, y: 82, r: 20 },
+                            { x: 28, y: 88, r: 35 }
                         ],
                         backgroundColor: 'rgba(255, 193, 7, 0.7)',
                         borderColor: 'rgba(255, 193, 7, 1)'
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     {
                         label: 'Your Company',
                         data: [
-                            {x: 30, y: 90, r: 40}
+                            { x: 30, y: 90, r: 40 }
                         ],
                         backgroundColor: 'rgba(78, 205, 196, 0.7)',
                         borderColor: 'rgba(78, 205, 196, 1)'
@@ -493,7 +493,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return [
                                     context.dataset.label,
                                     'Market Share: ' + context.raw.x + '%',
@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('d3Chart');
         const width = container.clientWidth;
         const height = container.clientHeight;
-        const margin = {top: 30, right: 30, bottom: 50, left: 60};
+        const margin = { top: 30, right: 30, bottom: 50, left: 60 };
         const innerWidth = width - margin.left - margin.right;
         const innerHeight = height - margin.top - margin.bottom;
 
@@ -527,11 +527,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Sample data
         const data = [
-            {age: '18-24', value: 15},
-            {age: '25-34', value: 35},
-            {age: '35-44', value: 25},
-            {age: '45-54', value: 15},
-            {age: '55+', value: 10}
+            { age: '18-24', value: 15 },
+            { age: '25-34', value: 35 },
+            { age: '35-44', value: 25 },
+            { age: '45-54', value: 15 },
+            { age: '55+', value: 10 }
         ];
 
         // X scale
@@ -579,10 +579,10 @@ document.addEventListener('DOMContentLoaded', function() {
             .attr('fill', 'rgba(106, 76, 147, 0.7)')
             .attr('stroke', 'rgba(106, 76, 147, 1)')
             .attr('stroke-width', 1)
-            .on('mouseover', function(event, d) {
+            .on('mouseover', function (event, d) {
                 d3.select(this)
                     .attr('fill', 'rgba(78, 205, 196, 0.7)');
-                
+
                 svg.append('text')
                     .attr('class', 'value-label')
                     .attr('x', x(d.age) + x.bandwidth() / 2)
@@ -590,68 +590,68 @@ document.addEventListener('DOMContentLoaded', function() {
                     .attr('text-anchor', 'middle')
                     .text(d.value + '%');
             })
-            .on('mouseout', function() {
+            .on('mouseout', function () {
                 d3.select(this)
                     .attr('fill', 'rgba(106, 76, 147, 0.7)');
-                
+
                 svg.selectAll('.value-label').remove();
             });
 
         // Update chart when demographic buttons are clicked
         document.querySelectorAll('#d3Chart ~ .chart-controls .control-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 if (this.classList.contains('active')) return;
-                
+
                 document.querySelectorAll('#d3Chart ~ .chart-controls .control-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                
+
                 const dataset = this.getAttribute('data-dataset');
                 let newData, xLabel, yLabel;
-                
-                switch(dataset) {
+
+                switch (dataset) {
                     case 'income':
                         newData = [
-                            {category: '<$30k', value: 20},
-                            {category: '$30k-$60k', value: 35},
-                            {category: '$60k-$100k', value: 25},
-                            {category: '>$100k', value: 20}
+                            { category: '<$30k', value: 20 },
+                            { category: '$30k-$60k', value: 35 },
+                            { category: '$60k-$100k', value: 25 },
+                            { category: '>$100k', value: 20 }
                         ];
                         xLabel = 'Income Level';
                         yLabel = 'Percentage (%)';
                         break;
                     case 'region':
                         newData = [
-                            {category: 'North', value: 30},
-                            {category: 'South', value: 25},
-                            {category: 'East', value: 20},
-                            {category: 'West', value: 25}
+                            { category: 'North', value: 30 },
+                            { category: 'South', value: 25 },
+                            { category: 'East', value: 20 },
+                            { category: 'West', value: 25 }
                         ];
                         xLabel = 'Region';
                         yLabel = 'Percentage (%)';
                         break;
                     default: // age
                         newData = [
-                            {category: '18-24', value: 15},
-                            {category: '25-34', value: 35},
-                            {category: '35-44', value: 25},
-                            {category: '45-54', value: 15},
-                            {category: '55+', value: 10}
+                            { category: '18-24', value: 15 },
+                            { category: '25-34', value: 35 },
+                            { category: '35-44', value: 25 },
+                            { category: '45-54', value: 15 },
+                            { category: '55+', value: 10 }
                         ];
                         xLabel = 'Age Group';
                         yLabel = 'Percentage (%)';
                 }
-                
+
                 // Update scales
                 x.domain(newData.map(d => d.category))
                     .range([0, innerWidth])
                     .padding(0.2);
-                
+
                 y.domain([0, d3.max(newData, d => d.value)]);
-                
+
                 // Update axes
                 svg.select('.x-axis').remove();
                 svg.select('.y-axis').remove();
-                
+
                 svg.append('g')
                     .attr('class', 'x-axis')
                     .attr('transform', `translate(0,${innerHeight})`)
@@ -662,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .attr('fill', '#000')
                     .attr('text-anchor', 'middle')
                     .text(xLabel);
-                
+
                 svg.append('g')
                     .attr('class', 'y-axis')
                     .call(d3.axisLeft(y).ticks(5))
@@ -673,13 +673,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     .attr('fill', '#000')
                     .attr('text-anchor', 'middle')
                     .text(yLabel);
-                
+
                 // Update bars
                 const bars = svg.selectAll('rect')
                     .data(newData);
-                
+
                 bars.exit().remove();
-                
+
                 bars.enter()
                     .append('rect')
                     .attr('x', d => x(d.category))
@@ -687,10 +687,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     .attr('fill', 'rgba(106, 76, 147, 0.7)')
                     .attr('stroke', 'rgba(106, 76, 147, 1)')
                     .attr('stroke-width', 1)
-                    .on('mouseover', function(event, d) {
+                    .on('mouseover', function (event, d) {
                         d3.select(this)
                             .attr('fill', 'rgba(78, 205, 196, 0.7)');
-                        
+
                         svg.append('text')
                             .attr('class', 'value-label')
                             .attr('x', x(d.category) + x.bandwidth() / 2)
@@ -698,10 +698,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             .attr('text-anchor', 'middle')
                             .text(d.value + (yLabel === 'Percentage (%)' ? '%' : ''));
                     })
-                    .on('mouseout', function() {
+                    .on('mouseout', function () {
                         d3.select(this)
                             .attr('fill', 'rgba(106, 76, 147, 0.7)');
-                        
+
                         svg.selectAll('.value-label').remove();
                     })
                     .merge(bars)
@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Resize charts when window resizes
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         // Reinitialize D3 chart to handle responsive resize
         document.getElementById('d3Chart').innerHTML = '';
         if (document.querySelector('#d3Chart ~ .chart-controls .active')) {
@@ -728,7 +728,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Debounce resize events
 function debounce(func, wait) {
     let timeout;
-    return function() {
+    return function () {
         const context = this, args = arguments;
         clearTimeout(timeout);
         timeout = setTimeout(() => {
@@ -738,7 +738,7 @@ function debounce(func, wait) {
 }
 
 // Update your resize listener
-window.addEventListener('resize', debounce(function() {
+window.addEventListener('resize', debounce(function () {
     // Reinitialize D3 chart to handle responsive resize
     const d3Container = document.getElementById('d3Chart');
     if (d3Container) {
@@ -761,10 +761,51 @@ function loadD3IfNeeded() {
 
 // Update your tab click handler to load D3 when customer tab is selected
 tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         if (this.getAttribute('data-tab') === 'customer') {
             loadD3IfNeeded();
         }
         // Rest of your tab handling code...
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const menuIcon = mobileMenuBtn.querySelector('i');
+
+    mobileMenuBtn.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+
+        // Change icon between bars and times
+        if (navLinks.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.navbar') && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
     });
 });

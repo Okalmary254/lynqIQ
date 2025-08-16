@@ -1,87 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Tab Switching Functionality
-//     const tabButtons = document.querySelectorAll('.tab-btn');
-//     const tabContents = document.querySelectorAll('.tab-content');
-
-//     tabButtons.forEach(button => {
-//         button.addEventListener('click', () => {
-//             // Remove active class from all buttons/contents
-//             tabButtons.forEach(btn => btn.classList.remove('active'));
-//             tabContents.forEach(content => content.classList.remove('active'));
-
-//             // Add active class to clicked button
-//             button.classList.add('active');
-
-//             // Show corresponding content
-//             const tabId = button.getAttribute('data-tab');
-//             document.getElementById(tabId).classList.add('active');
-//         });
-//     });
-
-//     // Animated Counter for Stats
-//     const statNumbers = document.querySelectorAll('.stat-number');
-
-//     function animateCounters() {
-//         statNumbers.forEach(stat => {
-//             const target = parseInt(stat.getAttribute('data-count'));
-//             const duration = 2000; // Animation duration in ms
-//             const step = target / (duration / 16); // 60fps
-
-//             let current = 0;
-//             const increment = () => {
-//                 current += step;
-//                 if (current < target) {
-//                     stat.textContent = Math.floor(current);
-//                     requestAnimationFrame(increment);
-//                 } else {
-//                     stat.textContent = target;
-//                     // Add % for uptime stat
-//                     if (stat.textContent === "99.9") {
-//                         stat.textContent += "%";
-//                     }
-//                 }
-//             };
-
-//             increment();
-//         });
-//     }
-
-//     // Animate when stats section is in view
-//     const statsSection = document.querySelector('.it-stats');
-//     const observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 animateCounters();
-//                 observer.unobserve(entry.target);
-//             }
-//         });
-//     }, { threshold: 0.5 });
-
-//     observer.observe(statsSection);
-
-//     // Animate service cards on scroll
-//     const serviceCards = document.querySelectorAll('.tab-content');
-
-//     const animateCards = () => {
-//         serviceCards.forEach((card, index) => {
-//             const cardPosition = card.getBoundingClientRect().top;
-//             const screenPosition = window.innerHeight / 1.3;
-
-//             if (cardPosition < screenPosition) {
-//                 card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.1}s forwards`;
-//             }
-//         });
-//     };
-
-//     // Set initial state
-//     serviceCards.forEach(card => {
-//         card.style.opacity = '0';
-//         card.style.transform = 'translateY(20px)';
-//     });
-
-//     window.addEventListener('scroll', animateCards);
-//     animateCards(); // Trigger on load
-// });
 
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile Menu Toggle
@@ -249,5 +165,46 @@ document.addEventListener('DOMContentLoaded', function () {
                 dropdownMenu.classList.toggle('active');
             }
         });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const menuIcon = mobileMenuBtn.querySelector('i');
+
+    mobileMenuBtn.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+
+        // Change icon between bars and times
+        if (navLinks.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.navbar') && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
     });
 });
