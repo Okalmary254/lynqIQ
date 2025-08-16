@@ -53,35 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Replace the map initialization with:
-    const map = L.map('map').setView([-1.270104, 36.808140], 17); // GTC Towers zoomed in
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    // Kenyan-themed marker (green instead of blue)
-    const kenyaIcon = L.icon({
-        iconUrl: '../assets/location-pin-ke.svg', // Green pin SVG
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-    });
-
-    L.marker([-1.270104, 36.808140], { icon: kenyaIcon }).addTo(map)
-        .bindPopup(`
-    <b>Lynqiq Nairobi</b><br>
-    <img src="assets/gtc-towers-thumb.jpg" width="120"><br>
-    GTC Towers, 5th Floor
-  `);
-    // Custom Marker Icon
-    const customIcon = L.icon({
-        iconUrl: 'assets/location-pin.svg',
-        iconSize: [40, 40],
-        iconAnchor: [20, 40]
-    });
-
-    L.marker([37.7749, -122.4194], { icon: customIcon }).addTo(map)
-        .bindPopup('<b>Lynqiq HQ</b><br>GTC Towers, Nairobi');
 
     // Add click animation to social links
     const socialLinks = document.querySelectorAll('.social-links a');
