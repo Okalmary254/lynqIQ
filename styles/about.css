@@ -810,6 +810,7 @@ h4,
 
     .timeline-item {
         padding-left: 70px;
+        margin-left: 0;
         width: 100%;
     }
 
@@ -837,6 +838,7 @@ h4,
 
     .timeline-item {
         padding-left: 50px;
+        margin-left: 20px;
     }
 
     .timeline-item::after {
