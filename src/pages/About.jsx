@@ -24,9 +24,9 @@ const milestones = [
 // ]
 const team = [
   { name: 'John Mary', role: 'Founder & CEO', bio: "Seasoned data science expert driving LynqIQ's strategic vision.", image: '/assets/john.png' },
-  { name: 'Adero David', role: 'Chief Technology Officer', bio: 'Machine learning specialist with deep expertise in scalable architectures.', image: '/assets/adero.jpg' },
-  { name: 'Samuel Ngige', role: 'Chief Data Officer', bio: "Data science pioneer shaping LynqIQ's analytics capabilities.", image: '/assets/samuel.jpg' },
-  { name: 'Anold Odero', role: 'Head of Software Development', bio: 'Full-stack developer leading innovative software solutions.', image: '/assets/anold.jpg' },
+  { name: 'Adero David', role: 'Chief Technology Officer', bio: 'Machine learning specialist with deep expertise in scalable architectures.', image: '/assets/adero.png' },
+  { name: 'Samuel Ngige', role: 'Chief Data Officer', bio: "Data science pioneer shaping LynqIQ's analytics capabilities.", image: '/assets/sam.png' },
+  { name: 'Anold Odero', role: 'Head of Software Development', bio: 'Full-stack developer leading innovative software solutions.', image: '/assets/arnold.png' },
 ]
 
 const stack = {
