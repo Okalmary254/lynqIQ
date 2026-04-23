@@ -16,10 +16,17 @@ const milestones = [
   { year: '2025', title: 'Regional Expansion', desc: 'Extended services across 5 counties.' },
 ]
 
+// const team = [
+//   { initials: 'JM', name: 'John Mary', role: 'Founder & CEO', bio: 'Seasoned data science expert driving LynqIQ\'s strategic vision.' },
+//   { initials: 'AD', name: 'Adero David', role: 'Chief Technology Officer', bio: 'Machine learning specialist with deep expertise in scalable architectures.' },
+//   { initials: 'SN', name: 'Samuel Ngige', role: 'Chief Data Officer', bio: 'Data science pioneer shaping LynqIQ\'s analytics capabilities.' },
+//   { initials: 'AO', name: 'Anold Odero', role: 'Head of Software Development', bio: 'Full-stack developer leading innovative software solutions.' },
+// ]
 const team = [
-  { initials: 'JM', name: 'John Mary', role: 'Founder & CEO', bio: 'Seasoned data science expert driving LynqIQ\'s strategic vision.' },
-  { initials: 'AD', name: 'Adero David', role: 'Chief Technology Officer', bio: 'Machine learning specialist with deep expertise in scalable architectures.' },
-  { initials: 'AO', name: 'Samuel Ngige', role: 'Chief Data Officer', bio: 'Data science pioneer shaping LynqIQ\'s analytics capabilities.' },
+  { name: 'John Mary', role: 'Founder & CEO', bio: "Seasoned data science expert driving LynqIQ's strategic vision.", image: '/assets/john.png' },
+  { name: 'Adero David', role: 'Chief Technology Officer', bio: 'Machine learning specialist with deep expertise in scalable architectures.', image: '/assets/adero.jpg' },
+  { name: 'Samuel Ngige', role: 'Chief Data Officer', bio: "Data science pioneer shaping LynqIQ's analytics capabilities.", image: '/assets/samuel.jpg' },
+  { name: 'Anold Odero', role: 'Head of Software Development', bio: 'Full-stack developer leading innovative software solutions.', image: '/assets/anold.jpg' },
 ]
 
 const stack = {
@@ -85,7 +92,17 @@ export default function About() {
           <div className="about-team__grid">
             {team.map((member, i) => (
               <motion.div key={member.name} className="about-team__card" {...fadeUp(i * 0.12)}>
-                <div className="about-team__avatar">{member.initials}</div>
+                                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="about-team__avatar-img"
+                  />
+                ) : (
+                  <div className="about-team__avatar">
+                    {getInitials(member.name)}
+                  </div>
+                )}
                 <h4>{member.name}</h4>
                 <span className="about-team__role">{member.role}</span>
                 <p>{member.bio}</p>

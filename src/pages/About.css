@@ -24,3 +24,13 @@
   .about-mission__grid, .about-team__grid, .about-stack__grid { grid-template-columns: 1fr; }
   .about-timeline__item { grid-template-columns: 80px 1fr; }
 }
+.about-team__avatar-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
