@@ -13,7 +13,7 @@ const milestones = [
   { year: '2022', title: 'Company Founded', desc: 'Launched with a focus on data analytics for SMEs in Kisumu.' },
   { year: '2023', title: 'First Enterprise Client', desc: 'Secured partnership with a major financial institution.' },
   { year: '2024', title: 'AI Lab Established', desc: 'Opened a dedicated artificial intelligence research division.' },
-  { year: '2025', title: 'Regional Expansion', desc: 'Extended services across 5 counties.' },
+  { year: '2026', title: 'Regional Expansion', desc: 'Extended services across 5 counties.' },
 ]
 
 // const team = [
