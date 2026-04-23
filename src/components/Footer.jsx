@@ -12,7 +12,7 @@ export default function Footer() {
             <p>We deliver innovative technology solutions that drive business growth and digital transformation across Africa and beyond.</p>
             <div className="footer__contact-details">
               <span><MapPin size={14} /> GTC Towers, Nairobi, Kenya</span>
-              <a href="mailto:contact@lynqiq.com"><Mail size={14} /> contact@lynqiq.com</a>
+              <a href="mailto:info@lynqiq.com"><Mail size={14} /> info@lynqiq.com</a>
               <a href="tel:+254743874690"><Phone size={14} /> +254 743 874 690</a>
               <span><Clock size={14} /> Mon–Fri: 8:00 AM – 5:00 PM</span>
             </div>
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <p>© 2025 LynqIQ. All rights reserved.</p>
+          <p>© 2026 LynqIQ. All rights reserved.</p>
           <div className="footer__legal">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
