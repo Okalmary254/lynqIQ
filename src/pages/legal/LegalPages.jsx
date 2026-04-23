@@ -11,7 +11,7 @@ function LegalPage({ title, lastUpdated, sections }) {
       <section style={{ background: 'var(--off-white)', padding: '5rem 0 3rem', borderBottom: '1px solid var(--light)' }}>
         <div className="container">
           <motion.span className="section-label" initial="hidden" animate="visible" variants={fadeUp}>Legal</motion.span>
-          <motion.h1 style={{ fontSize: 'clamp(2rem,4vw,3rem)', marginTop: '0.5rem' }} initial="hidden" animate="visible" variants={fadeUp}>{title}</motion.h1>
+          <motion.h12 style={{ fontSize: 'clamp(2rem,4vw,3rem)', marginTop: '0.5rem' }} initial="hidden" animate="visible" variants={fadeUp}>{title}</motion.h12>
           <motion.p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginTop: '0.75rem' }} initial="hidden" animate="visible" variants={fadeUp}>
             Last updated: {lastUpdated}
           </motion.p>
@@ -37,7 +37,7 @@ export function Privacy() {
   return (
     <LegalPage
       title="Privacy Policy"
-      lastUpdated="1 January 2025"
+      lastUpdated="April 2026"
       sections={[
         { heading: '1. Information We Collect', body: 'We collect information you provide directly to us, such as when you fill out our contact form (name, email address, company, and message). We also collect technical data such as IP addresses, browser type, and pages visited through standard web analytics tools.' },
         { heading: '2. How We Use Your Information', body: 'We use collected information to respond to your enquiries, provide our services, improve our website, send service-related communications, and comply with legal obligations. We do not sell, trade, or rent your personal information to third parties.' },
@@ -54,7 +54,7 @@ export function Terms() {
   return (
     <LegalPage
       title="Terms of Service"
-      lastUpdated="1 January 2025"
+      lastUpdated="April 2026"
       sections={[
         { heading: '1. Acceptance of Terms', body: 'By accessing or using the LynqIQ website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.' },
         { heading: '2. Services', body: 'LynqIQ provides technology consulting, software development, data science, and IT support services. The scope, deliverables, and commercial terms of each engagement are defined in individual service agreements.' },
@@ -71,7 +71,7 @@ export function Cookies() {
   return (
     <LegalPage
       title="Cookie Policy"
-      lastUpdated="1 January 2025"
+      lastUpdated="April 2026"
       sections={[
         { heading: 'What Are Cookies?', body: 'Cookies are small text files stored on your device when you visit a website. They are widely used to make websites function efficiently and to provide reporting information to site owners.' },
         { heading: 'How We Use Cookies', body: 'We use strictly necessary cookies to ensure the website operates correctly, and analytics cookies (such as Google Analytics) to understand how visitors interact with our site so we can improve it. We do not use advertising or tracking cookies.' },

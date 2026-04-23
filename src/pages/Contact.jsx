@@ -63,7 +63,7 @@ export default function Contact() {
                 <div className="contact__success">
                   <CheckCircle size={40} color="var(--color-accent)" />
                   <h3>Message Sent!</h3>
-                  <p>Thank you for reaching out. We will get back to you within one business day.</p>
+                  <p>Thank you for reaching out. We will get back to you within 3 hours.</p>
                   <button className="btn btn-outline" onClick={() => setSent(false)}>Send Another</button>
                 </div>
               ) : (
