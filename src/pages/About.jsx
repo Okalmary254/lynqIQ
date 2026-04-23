@@ -19,7 +19,7 @@ const milestones = [
 const team = [
   { initials: 'JM', name: 'John Mary', role: 'Founder & CEO', bio: 'Seasoned data science expert driving LynqIQ\'s strategic vision.' },
   { initials: 'AD', name: 'Adero David', role: 'Chief Technology Officer', bio: 'Machine learning specialist with deep expertise in scalable architectures.' },
-  { initials: 'AO', name: 'Aaron Omondi', role: 'Chief Data Officer', bio: 'Data science pioneer shaping LynqIQ\'s analytics capabilities.' },
+  { initials: 'AO', name: 'Samuel Ngige', role: 'Chief Data Officer', bio: 'Data science pioneer shaping LynqIQ\'s analytics capabilities.' },
 ]
 
 const stack = {
