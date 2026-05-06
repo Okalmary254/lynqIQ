@@ -55,6 +55,7 @@ export default function Navbar() {
           </div>
           <NavLink to="/case-studies" className={({ isActive }) => isActive ? 'active' : ''}>Case Studies</NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink>
+          <NavLink to="/careers" className={({ isActive }) => isActive ? 'active' : ''}>Careers</NavLink>
         </nav>
         <div className="navbar__actions">
           <Link to="/contact" className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '13px' }}>Book Consultation</Link>
@@ -73,6 +74,7 @@ export default function Navbar() {
               <NavLink to="/services">Services</NavLink>
               {servicesMenu.map(s => (<NavLink key={s.to} to={s.to} className="navbar__mobile-sub">{s.label}</NavLink>))}
               <NavLink to="/case-studies">Case Studies</NavLink>
+              <NavLink to="/careers">Careers</NavLink>
               <NavLink to="/contact">Contact</NavLink>
               <Link to="/contact" className="btn btn-primary" style={{ marginTop: '8px' }}>Book Consultation</Link>
             </div>

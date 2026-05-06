@@ -12,7 +12,7 @@ export default function Footer() {
             <p>We deliver innovative technology solutions that drive business growth and digital transformation across Africa and beyond.</p>
             <div className="footer__contact-details">
               <span><MapPin size={14} /> GTC Towers, Nairobi, Kenya</span>
-              <a href="mailto:info@lynqiq.com"><Mail size={14} /> info@lynqiq.com</a>
+              <a href="mailto:lynqiq@zohomail.jp"><Mail size={14} /> lynqiq@zohomail.jp</a>
               <a href="tel:+254743874690"><Phone size={14} /> +254 743 874 690</a>
               <span><Clock size={14} /> Mon–Fri: 8:00 AM – 5:00 PM</span>
             </div>
@@ -24,6 +24,7 @@ export default function Footer() {
             <Link to="/services">Services</Link>
             <Link to="/case-studies">Case Studies</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/careers">Careers</Link>
           </div>
           <div className="footer__col">
             <h4>Services</h4>
