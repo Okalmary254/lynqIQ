@@ -47,7 +47,7 @@ export default function Contact() {
               <h2 className="heading-md">Contact Information</h2>
               <div className="contact__details">
                 <div className="contact__detail"><div className="contact__detail-icon"><MapPin size={18} /></div><div><strong>Address</strong><span>GTC Towers, Nairobi, Kenya</span></div></div>
-                <div className="contact__detail"><div className="contact__detail-icon"><Mail size={18} /></div><div><strong>Email</strong><a href="mailto:contact@lynqiq.com">contact@lynqiq.com</a></div></div>
+                <div className="contact__detail"><div className="contact__detail-icon"><Mail size={18} /></div><div><strong>Email</strong><a href="mailto:lynqiq@zohomail.jp">lynqiq@zohomail.jp</a></div></div>
                 <div className="contact__detail"><div className="contact__detail-icon"><Phone size={18} /></div><div><strong>Phone</strong><a href="tel:+254743874690">+254 743 874 690</a></div></div>
                 <div className="contact__detail"><div className="contact__detail-icon"><Clock size={18} /></div><div><strong>Working Hours</strong><span>Mon–Fri: 8:00 AM – 5:00 PM EAT</span></div></div>
               </div>
